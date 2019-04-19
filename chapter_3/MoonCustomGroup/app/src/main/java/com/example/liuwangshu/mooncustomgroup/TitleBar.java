@@ -7,10 +7,11 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class TitleBar extends RelativeLayout {
+public class TitleBar extends LinearLayout {
     private ImageView iv_titlebar_left;
     private ImageView iv_titlebar_right;
     private TextView tv_titlebar_title;
@@ -47,6 +48,7 @@ public class TitleBar extends RelativeLayout {
     }
 
     private void initView(Context context) {
+//        seachal annotation，此时的第二个参数this的理解，
         LayoutInflater.from(context).inflate(R.layout.view_customtitle, this, true);
         iv_titlebar_left = (ImageView) findViewById(R.id.iv_titlebar_left);
         iv_titlebar_right = (ImageView) findViewById(R.id.iv_titlebar_right);
